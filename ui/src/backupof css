@@ -1,0 +1,33 @@
+.box {
+    width: 350px;
+    height: 0px;
+    background: blue;
+    position: relative;
+    top: 0px
+  }
+  .mud-loss {
+    width: 150px;
+    height: 250px;
+    background: gray;
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    overflow: hidden;
+  }
+  .cl {
+    width: 40px;
+    height: 80px;
+    background: purple;
+    position: relative;
+    left: 150px;
+    top: 90px;
+    overflow: hidden;
+  }
+  
+  .cls {
+    position: relative;
+    left: 150px;
+    top: 90px;
+    overflow: hidden;
+  }
+  

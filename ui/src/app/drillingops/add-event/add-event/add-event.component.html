@@ -1,0 +1,78 @@
+<br>
+<br>
+<br>
+<br>
+<div class="page-header">
+  <div class="container">
+    <h1> {{header}} </h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+
+    
+      <form #eventForm="ngForm">
+      <div class="col-xs-6">
+        <mat-label>Start Point </mat-label>
+        <!--<input type="number" name="startPoint" placeholder="Start Point"  formControlName="startPoint"> -->
+        <input type="number" matInput matInput [(ngModel)]="drillEventObj.startPoint" name="startPoint">
+      </div>
+      <br>
+      <br>
+
+      <div class="col-xs-6">
+
+        <mat-label>End Point </mat-label>
+        <!-- <input type="number" name="endPoint" placeholder="End Point" formControlName="endPoint">-->
+        <input type="number" matInput matInput [(ngModel)]="drillEventObj.endPoint" name="endtPoint">
+
+      </div>
+      <br>
+      <br>
+
+      <div class="col-xs-6">
+
+        <mat-label>Select Event </mat-label>
+
+        <select name="eventName" [(ngModel)]="drillEventObj.eventName" placeholder="Select Drill Event">
+          <option [ngValue]="null" disabled>Select Event</option>
+          <option *ngFor="let drillEvent of drillEvents" [ngValue]="drillEvent.name">{{drillEvent.name}}</option>
+        </select>
+
+        
+
+
+      
+<!--
+        <select formControlName="eventName" placeholder="Select Drill Event">
+          <option [ngValue]="null" disabled>Select Event</option>
+          <option *ngFor="let drillEvent of drillEvents" [ngValue]="drillEvent.name">{{drillEvent.name}}</option>
+        </select>
+
+      -->
+      </div>
+
+      <br>
+      <br>
+
+
+    
+      <div class="row">
+        <div class="col-xs-12">
+        <div class="row between-xs" *ngIf="!isNewEvent">
+            <button mat-raised-button color="primary" (click)="onUpdate()"> Save </button>
+            
+        </div>
+        <div class="row between-xs" *ngIf="isNewEvent">            
+            
+            <button mat-raised-button color="primary" (click)="onAdd()"> Add </button>
+        </div>
+        </div>
+    </div>
+
+
+    </form>
+
+  </div>
+</div>

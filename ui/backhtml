@@ -1,0 +1,25 @@
+<p>stuckpipe works!</p>
+
+
+
+    <div *ngFor="let shape of shapes">  
+        <!--
+        <ul *ngIf="shape.id == 1" class="box" [ngStyle]="{ 'height': +height+'px', 'top': + top +'px'}" ></ul>
+        <ul *ngIf="shape.id == 2" class="mud-loss" [ngStyle]="{ 'height': +height+'px', 'top': + top +'px'}"></ul>
+        <ul *ngIf="shape.id == 3" class="cl"  [ngStyle]="{ 'height': +height+'px', 'top': + top +'px'}"></ul>
+    -->
+
+    <p *ngIf="shape.id == 1" class="box" [style.height.px]="shape.height" [style.top.px]="shape.top" > </p>
+    <p *ngIf="shape.id == 2" class="mud-loss" [style.height.px]="shape.height" [style.top.px]="shape.top" > </p>
+    <p *ngIf="shape.id == 3" class="cl" [style.height.px]="shape.height" [style.top.px]="shape.top" > </p>
+    
+    
+
+    <!--
+    <div *ngIf="shape.id == 1" class="box" [style.height.px]="shape.height" [style.top.px]="shape.top" ></div>
+    <div *ngIf="shape.id == 2" class="mud-loss" [style.height.px]="shape.height" [style.top.px]="shape.top" ></div>
+        
+    <div *ngIf="shape.id == 3" class="cl" [style.height.px]="shape.height" [style.top.px]="shape.top" > </div>
+    -->
+
+    </div>
